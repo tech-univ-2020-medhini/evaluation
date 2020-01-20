@@ -9,4 +9,8 @@ describe('The scoring function', () => {
 		const result = score([6, 3, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]);
 		expect(result).toBe(12);
 	});
+	it('Should add the points of an extra throw in case of a spare', () => {
+		const result = score([6, 4, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]);
+		expect(result).toBe(16);
+	});
 });
