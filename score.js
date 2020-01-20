@@ -1,11 +1,14 @@
 function score(throwsArray){
 	let calculatedScore = 0;
-	let turnNumber = 1;
+	let turnNumber = 0;
 	if(throwsArray == undefined){
 		return calculatedScore;
 	}
 	let firstThrow = true;
 	for(let i=0;i<throwsArray.length;i++){
+		if(turnNumber==10){
+			break;
+		}
 		if(!firstThrow){
 			if(throwsArray[i]+throwsArray[i-1] < 10){
 				calculatedScore = calculatedScore + throwsArray[i] + throwsArray[i-1];
@@ -27,6 +30,7 @@ function score(throwsArray){
 				firstThrow=!firstThrow;
 			}
 		}
+		
 		
 	}
 	return calculatedScore;

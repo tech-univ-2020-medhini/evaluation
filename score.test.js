@@ -17,4 +17,8 @@ describe('The scoring function', () => {
 		const result = score([ 10, 10, 10, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]);
 		expect(result).toBe(60);
 	});
+	it('Should stop adding points after 10 throws', () => {
+		const result = score([ 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 10, 10, 10]);
+		expect(result).toBe(30);
+	});
 });
