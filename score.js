@@ -15,8 +15,19 @@ function score(throwsArray){
 				calculatedScore = calculatedScore + throwsArray[i+1] + throwsArray[i] + throwsArray[i-1];
 				turnNumber++;
 			}
+			firstThrow=!firstThrow;
 		}
-		firstThrow=!firstThrow;
+		else{
+			if(throwsArray[i] == 10){
+				calculatedScore = calculatedScore + throwsArray[i] + throwsArray[i+1] + throwsArray[i+2];
+				turnNumber++;
+                
+			}
+			else{
+				firstThrow=!firstThrow;
+			}
+		}
+		
 	}
 	return calculatedScore;
 }

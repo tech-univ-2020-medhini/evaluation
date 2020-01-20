@@ -13,4 +13,8 @@ describe('The scoring function', () => {
 		const result = score([6, 4, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]);
 		expect(result).toBe(16);
 	});
+	it('Should add the points of two extra throws in case of a strike', () => {
+		const result = score([ 10, 10, 10, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]);
+		expect(result).toBe(60);
+	});
 });
