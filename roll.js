@@ -1,5 +1,6 @@
-function roll(args){
-	const throwsArr = [];
+let throwsArr = [];
+function roll(numOfPins){
+	throwsArr.push(numOfPins);
 	return throwsArr;
 }
 
